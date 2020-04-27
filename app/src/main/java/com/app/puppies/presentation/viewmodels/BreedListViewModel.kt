@@ -40,10 +40,9 @@ class BreedListViewModel constructor(
         }
     }
 
-    fun setFirsData(hashMap: HashMap<String, List<String>>){
-
+    private fun setFirsData(hashMap: HashMap<String, List<String>>){
         val firstDataItems: ArrayList<String> = arrayListOf()
-        for (entry in hashMap.entries.sortedBy {it.key}){
+        for (entry in hashMap.entries){
             entry.key.let {
                 if(entry.value.isNotEmpty()){
                     for (type in entry.value){
@@ -55,7 +54,7 @@ class BreedListViewModel constructor(
             }
         }
 
-        breedData.value = firstDataItems
+        breedData.value = firstDataItems.sortedBy { it }
         loadingVisibility.value = View.GONE
 
     }

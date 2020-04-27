@@ -1,12 +1,10 @@
 package com.app.puppies.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.BindingAdapter
-import com.app.puppies.databinding.ActivityDogBinding
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
-import androidx.lifecycle.MutableLiveData
 import com.app.puppies.R
+import com.app.puppies.databinding.ActivityDogBinding
 
 class DogActivity : AppCompatActivity() {
 
