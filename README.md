@@ -28,8 +28,7 @@
 
 | LIST BREED  | DETAIL IMAGE |
 | ------------- | ------------- |
-|![BreedList](https://user-images.githubusercontent.com/21106507/80388115-7c881400-8877-11ea-986c-97e905de31ca.jpeg)
- | ![screenshots_secun](https://user-images.githubusercontent.com/21106507/80331020-e7543380-8814-11ea-94ad-44d85b40ecee.jpeg)|
+|![BreedList](https://user-images.githubusercontent.com/21106507/80388115-7c881400-8877-11ea-986c-97e905de31ca.jpeg|![screenshots_secun](https://user-images.githubusercontent.com/21106507/80331020-e7543380-8814-11ea-94ad-44d85b40ecee.jpeg)|
    
    
    
