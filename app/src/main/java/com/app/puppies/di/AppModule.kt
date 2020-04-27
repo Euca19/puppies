@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit
 /**
  * dependency injection
  * */
-
 val AppModule = module {
 
     single { createService(get()) }
