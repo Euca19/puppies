@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Puppies</string>
+    <string name="no_internet">Sin conexión a internet</string>
+    <string name="breeds_Images">Imagenes de las razas</string>
+    <string name="refresh">Resfrescar</string>
+
+
+
+
+</resources>

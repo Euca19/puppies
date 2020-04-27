@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/breedListFragment">
+
+    <fragment
+        android:id="@+id/breedListFragment"
+        android:name="com.app.puppies.presentation.fragment.BreedListFragment"
+        android:label="fragment_breed_list"
+        tools:layout="@layout/fragment_breed_list">
+
+        <action android:id="@+id/action_fragment_breed_image_detail"
+            app:destination="@id/fragment_breed_image_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_breed_image_detail"
+        android:name="com.app.puppies.presentation.fragment.BreedImageDetailFragment"
+        tools:layout="@layout/fragment_breed_image_detail">
+        <argument
+            android:name="breedId"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

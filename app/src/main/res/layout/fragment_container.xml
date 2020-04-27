@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="model"
+            type="com.app.puppies.presentation.viewmodels.BreedListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.ui.MainActivity">
+
+        <include android:id="@+id/breed_list_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{model.loadingVisibility}"
+            layout="@layout/fragment_breed_list"/>
+
+        <include android:id="@+id/empty_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/empty_view"
+            android:visibility="@{model.loadingVisibility}"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

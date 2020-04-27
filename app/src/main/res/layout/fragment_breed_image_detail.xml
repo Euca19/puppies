@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.app.puppies.domain.model.BreedImage"/>
+        <variable
+            name="viewModel"
+            type="com.app.puppies.presentation.viewmodels.BreedImageViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/root_layout"
+        android:layout_height="match_parent"
+        android:background="@drawable/horizontal_gradient">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:subtitleTextColor="#f5fbff"
+            app:title="@string/breeds_Images"
+            app:titleTextColor="@color/color_text" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/breedImageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:spanCount="@integer/grid_columns"
+            tools:context=".presentation.activity.DogActivity"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/item_breed_image" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingVisibility"
+            android:layout_width="@dimen/image_lotties"
+            android:layout_height="@dimen/image_lotties"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading_dog.json"
+            app:lottie_loop="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
